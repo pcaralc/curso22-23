@@ -58,6 +58,7 @@
     
     echo "<div class='container'>";
     echo "<div class='row'>";
+    echo "<p class='display-1' class=' fw-bold'>LIBRERIA</p>";
 
     $categorias = array_column($libreria, "cat");
 

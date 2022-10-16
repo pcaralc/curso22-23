@@ -7,6 +7,10 @@
     <title>Document</title>
 </head>
 <body>
+<?php
+include_once($_SERVER["DOCUMENT_ROOT"] . "/cabecera.php");
+?>
+
     <?php
     /* Mejora el programa anterior de tal manera que el mensaje original lo divida primero
     en un array de palabras considerando el espacio en blanco como separador
@@ -53,5 +57,9 @@
     echo "<br>".$mensaje;
 
     ?>
+
+<?php
+include_once("../pie.php");
+?>
 </body>
 </html>
