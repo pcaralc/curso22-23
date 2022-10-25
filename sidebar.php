@@ -57,6 +57,7 @@
 					<div class="collapse" id="tema3">
 					<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
 						<li><a href="/tema3/cookies/index.php" class="link-dark rounded">Cookies</a></li>
+						<li><a href="/tema3/cookies/publicidad.php" class="link-dark rounded">Publicidad</a></li>
 					</ul>
 					</div>
 				</li>
