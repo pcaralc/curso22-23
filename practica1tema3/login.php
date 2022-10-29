@@ -1,7 +1,3 @@
-<?php session_start(); 
- //session_destroy();
- ?>
-
 <?php include("lib.php"); ?>
 
 <!DOCTYPE html>
@@ -28,7 +24,7 @@
 
 </head>
 
-<body class="bg-gradient-primary">
+<body class="bg-gradient-secondary">
 
     <div class="container">
 
@@ -45,9 +41,17 @@
                             <div class="col-lg-6">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+                                        <h1 class="h4 text-gray-900 mb-4">Bienvenido!</h1>
                                     </div>
-                                    <form class="user">
+                                    <?php  
+                                        if ($_GET) {
+                                            if (isset($_GET['error'])) {
+                                                echo "<p class='text-danger'>Contraseña incorrecta <br> <small  >Debe contener mínimo 8 caracteres y 1 mayúscula </small></p>";
+                                            }
+                                        }
+                                                                           
+                                    ?>
+                                    <form class="user" action="controlador.php" method="post">
                                         <div class="form-group">
                                             <input type="email" class="form-control form-control-user"
                                                 id="email" name="email"  aria-describedby="emailHelp"
@@ -64,9 +68,8 @@
                                                     Me</label>
                                             </div>
                                         </div>
-                                        <a href="blank.php" class="btn btn-primary btn-user btn-block">
-                                            Login
-                                        </a>
+                                        <input type="submit" value="Login"  class="btn btn-secondary btn-user btn-block">
+                                            
                                     </form>
                                 </div>
                             </div>

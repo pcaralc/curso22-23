@@ -1,7 +1,4 @@
-  <?php
-    include("cabecera.php"); 
-    include("lib.php");
-  ?>
+<?php include('cabecera.php'); ?>
 
 
 <div class="col-md-7 col-lg-8">
@@ -15,36 +12,36 @@
             </div>
             <br>
             <div class="col-sm-6">
-              <label for="fechainicio" class="form-label">FechaInicio</label>
-                <input type="date" name="fechainicio" id="fechainicio" required>
+              <label for="fechainicio" class="form-label">FechaInicio</label><br>
+              <input type="date" name="fechainicio" id="fechainicio" required>
             </div>
            
 
-            <div class="col-sm-12">
-            <label for="fechafin" class="form-label">FechaFin</label>
+            <div class="col-sm-6">
+            <label for="fechafin" class="form-label">FechaFin</label><br>
             <input type="date" name="fechafin" id="fechafin" required>
             </div>
 
-            <div class="col-sm-3">
+            <div class="col-sm-6">
               <label for="dias" class="form-label">DiasTranscurridos</label>
-              <input type="number" class="form-control" id="dias" name="dias" placeholder="" value="" min="1" required>
+              <input type="number" class="form-control" id="dias" name="dias" placeholder="" value="" min="1" >
             </div>
 
-            <div class="col-sm-9">
+            <div class="col-sm-6">
               <label for="porcentaje" class="form-label">PorcentajeCompletado</label>
-              <input type="number" class="form-control" id="porcentaje" name="porcentaje" placeholder="" value="" min="1" required>
+              <input type="number" class="form-control" id="porcentaje" name="porcentaje" placeholder="" value="" min="1">
             </div>
 
-            <div class="col-sm-9">
+            <div class="col-sm-6">
               <label for="importancia" class="form-label">Importancia</label>
-              <input type="range" name="importancia" id="importancia" min="1" max="5" required>
+              <input type="number" class="form-control" name="importancia" id="importancia" min="1" max="5" required>
             </div>
 
           </div>
 
           <hr class="my-4">
 
-          <button class="w-100 btn btn-primary btn-lg" name="nuevoProyecto" type="submit">Nuevo</button>
+          <input type="submit" value="Añadir nuevo" class="w-100 btn btn-success btn-lg" name="nuevo" type="submit">
         </form>
       </div>
     </div>
@@ -54,3 +51,4 @@
   <?php
     include("pie.php"); 
   ?>
+  

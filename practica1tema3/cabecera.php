@@ -1,5 +1,5 @@
 <?php session_start(); 
- //session_destroy();
+//session_destroy();
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,10 +31,10 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul class="navbar-nav bg-gradient-secondary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="blank.php">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="proyectos.php">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
@@ -54,7 +54,7 @@
             <hr class="sidebar-divider">
 
             <!-- Heading -->
-            <div class="sidebar-heading">
+            <div class="sidebar-heading text-white">
                 Interface
             </div>
 
@@ -66,22 +66,13 @@
                     <span>Proyectos </span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Components:</h6>
+                    <div class="bg-white py-2 collapse-inner rounded" >
+                        <h6 class="collapse-header">Opciones:</h6>
                         <a class="collapse-item" href="nuevoproyecto.php">Nuevo</a>
-                        <a class="collapse-item" href="cards.html">Cards</a>
+                        <a class="collapse-item" href="controlador.php?accion=eliminarTodo">Eliminar Todo</a>
                     </div>
                 </div>
             </li>
-
-            <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Tables</span></a>
-            </li>
-
-
 
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
@@ -98,7 +89,7 @@
             <div id="content">
 
                 <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                <nav class="navbar navbar-expand navbar-light bg-secondary topbar mb-4 static-top shadow">
 
                     <!-- Sidebar Toggle (Topbar) -->
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
@@ -114,8 +105,12 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">
-                                    <?php $_SESSION['email'];?>
+                                <span class="mr-2 d-none d-lg-inline text-white small">
+                                    <?php 
+                                    if (isset($_SESSION['email'])){
+                                        echo $_SESSION['email'];
+                                    }
+                                    ?>
                                 </span>
                                 <img class="img-profile rounded-circle"
                                     src="img/undraw_profile.svg">
@@ -123,10 +118,11 @@
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                <!-- <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal"> -->
+                                <a class="dropdown-item" href="controlador.php?accion=salir">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2  text-gray-400"></i>
                                     Logout
-                                </a>
+                                </a>    
                             </div>
                         </li>
 
