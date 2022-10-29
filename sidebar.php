@@ -61,6 +61,16 @@
 					</ul>
 					</div>
 				</li>
+				<li class="mb-1">
+					<button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#panel" aria-expanded="false">
+					PANEL
+					</button>
+					<div class="collapse" id="panel">
+					<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+						<li><a href="/practica1tema3/login.php" class="link-dark rounded">Panel</a></li>
+					</ul>
+					</div>
+				</li>
 
 				<li class="mb-1">
 					<button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#tema4" aria-expanded="false">
