@@ -44,14 +44,7 @@
         } else {
 
             pintarTambor();
-
-            for ($i = 0; $i < $_SESSION['numJugadores']; $i++) {
-                echo "<br>";
-                echo "<h1>Nick: " . $_SESSION['jugador' . $i][0] . "</h1>";
-                echo "<h3>Saldo: " . $_SESSION['jugador' . $i][1] . "</h3>";
-                pintarCarton($_SESSION['carton' . $i], $i);
-            }
-
+            
             if (isset($_GET['accion']) == 'jugar') {
                 //Botón sacar número del tambor
                 echo "<br>";
@@ -59,6 +52,13 @@
                 echo "<button type='submit' name='sacarBola' class='btn btn-primary'>Sacar bola</button>";
                 echo "</form>";
                 echo "<br><br>";
+            }
+
+            for ($i = 0; $i < $_SESSION['numJugadores']; $i++) {
+                echo "<br>";
+                echo "<h1>Nick: " . $_SESSION['jugador' . $i][0] . "</h1>";
+                echo "<h3>Saldo: " . $_SESSION['jugador' . $i][1] . "</h3>";
+                pintarCarton($_SESSION['carton' . $i], $i);
             }
         }
         ?>
