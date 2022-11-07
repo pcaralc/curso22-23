@@ -37,8 +37,4 @@
         $datos = htmlspecialchars($datos); // Traduce caracteres especiales en entidades HTML
         return $datos;
     }
-
-    function diasTranscurridos(){
-        
-    }
 ?>

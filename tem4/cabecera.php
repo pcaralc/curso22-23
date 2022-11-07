@@ -70,8 +70,7 @@
                         <h6 class="collapse-header">Opciones:</h6>
                         <a class="collapse-item" href="nuevoproyecto.php">Nuevo</a>
                         <a class="collapse-item" href="controlador.php?accion=eliminarTodo">Eliminar Todo</a>
-                        <a class="collapse-item" href="pdf.php">Crear pdf</a>
-                        <a class="collapse-item" href="email.php">Enviar email</a>
+                        <a class="collapse-item" href="controlador.php?accion=enviarEmail">Enviar por email</a>
                     </div>
                 </div>
             </li>
