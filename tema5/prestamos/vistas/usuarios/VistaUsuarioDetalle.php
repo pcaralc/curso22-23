@@ -26,7 +26,7 @@
                     <h5>Dirección: '.$usuario->getDireccion().'</h5>
                     <h5>Población: '.$usuario->getPoblacion().'</h5>
                     <h5>Teléfono: '.$usuario->getTelefono().'</h5>
-                    <h5>Email: '.$usuario->getemail().'</h5>
+                    <h5>Email: '.$usuario->getEmail().'</h5>
                   </div>
                 </div>
               </div>';

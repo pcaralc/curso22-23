@@ -14,6 +14,7 @@
               <div class="input-group" style="width:30%">
               <form action="" method="get">
                 <select name="buscarEstado" id="buscarEstado" class="rounded ">
+                <option class="text-secondary" name="buscarEstado"  id="buscarEstado" value="Buscar por Estado">Buscar por Estado</option>
                   <option name="buscarEstado" id="buscarEstado" value="activo">activo</option>
                   <option name="buscarEstado" id="buscarEstado" value="devuelto">devuelto</option>
                   <option name="buscarEstado" id="buscarEstado" value="sobrepasado1Mes">sobrepasado1Mes</option>
@@ -40,21 +41,21 @@
             echo '                
             <div class="col-md-6">
             <div class="h-100 p-5 bg-dark text-white rounded-3">
-              <h2>'.$prestamo->titulo.'</h2>
-              <p>'.$prestamo->nombre.'</p>
+              <h2>Libro: '.$prestamo->titulo.'</h2>
+              <p>Usuario: '.$prestamo->nombre.'</p>
               
               <form action="" method="get">
-                Fecha Inicio: <input type="date" name="fechaInicio" id="fechaInicio" value="'.$prestamo->getFechaInicio().'"><br>
-                Fecha Fin: <input type="date" name="fechaFin" id="fechaFin" value="'.$prestamo->getFechaFin().'"> <br>
-                Estado: <select class="form-select" style="width:35%" name="estado" id="estado" aria-label="Default select example">
+                Fecha Inicio: <input type="date" name="fechaInicio" id="fechaInicio" value="'.$prestamo->getFechaInicio().'" class="ms-2"><br>
+                Fecha Fin: <input type="date" name="fechaFin" id="fechaFin" value="'.$prestamo->getFechaFin().'" class="mt-2 ms-4"><br>
+                Estado: <select class="form-select mt-1" style="width:35%" name="estado" id="estado" aria-label="Default select example">
                   <option class="bg-secondary" name="estado"  id="estado" value="'.$prestamo->getEstado().'">'.$prestamo->getEstado().'</option>
                   <option name="estado"  id="estado" value="activo">activo</option>
                   <option name="estado"  id="estado" value="devuelto">devuelto</option>
                   <option name="estado"  id="estado" value="sobrepasado1Mes">sobrepasado1Mes</option>
                   <option name="estado"  id="estado" value="sobrepasado1Año">sobrepasado1Año</option>
-                </select><br>
+                </select>
                 <input type="hidden" name="id" value="' . $prestamo->getId() . '">
-                <input type="submit" value="Modificar" name="modificar">
+                <input type="submit" value="Modificar" name="modificar" class="rounded-3 mt-3 bg-dark text-white border-white">
             </form>
 
 

@@ -7,7 +7,7 @@
             include("./vistas/cabecera.php");
 
             echo '<div class=" p-3 text-white">            
-            <nav  class="d-flex flex-row-reverse"><button type="button" class="btn btn-outline-white bg-dark ms-3"><a href="./enrutador.php?accion=inicio" style="text-decoration:none" class="text-white">Volver a prestamos</a></button>
+            <nav  class="d-flex flex-row-reverse"><button type="button" class="btn btn-outline-white bg-dark ms-3"><a href="./enrutador.php?accion=inicio" style="text-decoration:none" class="text-white">Volver a biblioteca</a></button>
             <button type="button" class="btn btn-outline-white bg-dark"><a href="./enrutador.php?accion=libros" style="text-decoration:none" class="text-white">Volver a Libros</a></button>
             </nav>
                   </div>
