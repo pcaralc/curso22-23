@@ -99,9 +99,9 @@
             ControladorPrestamo::buscarEstado($estado);
         }
 
-        if (isset($_GET["buscarDNI"])) {
-            $dni = filtrado($_REQUEST['dni']);
-            ControladorPrestamo::buscarDNI($dni);
+        if (isset($_GET["buscarYear"])) {
+            $yea = filtrado($_REQUEST['yea']);
+            ControladorRegalo::buscarYear($yea);
         }
     }
 
