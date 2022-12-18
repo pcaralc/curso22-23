@@ -5,14 +5,14 @@ class BarajaInglesa extends baraja{
 
     function __construct(){
         parent::__construct();
-        $this->generarMazo();
+        self::generarMazo();
         $this->barajar();
     }
 
     private function generarMazo(){
-        foreach (self::$figuras as $figura) {
-            foreach(self::$palos as $palo) {
-                array_push($this->mazo, new Carta($palo, $figura));
+        for ($i = 0; $i < count(self::$palos); $i++) {
+            for ($j = 0; $j < count(self::$figuras); $j++) {
+                array_push($this->mazo, new Carta(self::$palos[$i], self::$figuras[$j]));
             }
         }
     }

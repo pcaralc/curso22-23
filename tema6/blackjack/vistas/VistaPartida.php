@@ -16,7 +16,6 @@
             $ruta .= $cartaImg;
 
 
-
             echo'<img src="'.$ruta.'.png">';
 
             include "pie.php";

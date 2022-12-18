@@ -31,7 +31,7 @@ session_start();
 
 
     if($_REQUEST){
-        if(isset($_REQUEST['acion'])){
+        if(isset($_REQUEST['accion'])){
             if($_REQUEST['accion']== "inicio"){
                 ControladorPartida::nuevaPartida(); 
             }

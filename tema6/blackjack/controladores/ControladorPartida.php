@@ -6,27 +6,31 @@
             $baraja = new BarajaInglesa();
 
             $partida = new Partida($jugador, $crupier, $baraja);
-
             $_SESSION['partida']= serialize($partida);
 
-           
+            self::pedirCarta();
             
         }
 
         static function pedirCarta(){
             $partida = unserialize($_SESSION['partida']);
+            $jugador = $partida->getJugador();
+            $crupier = $partida->getMaquina();
+            $baraja = $partida->getBaraja();
 
-            if($partida->getJugador()->valorMano() <17){
-                $partida->getJugador()->nuevaCarta($partida->getBaraja()->repartirCarta());
-                $partida->getJugador()->nuevaCarta($partida->getBaraja()->repartirCarta());
+            if($partida->$jugador->valorMano() <17){
+                $mazo = $baraja ->getMazo();
+                $cartasJ= new Carta($mazo->getPalo(), $mazo->getFigura());
+                $partida->$jugador->nuevaCarta($cartasJ);
             }else{
                 //tiene que plantarse
             }
 
 
-            if($partida->getCrupier()->valorMano() <17){
-                $partida->getCrupier()->nuevaCarta($partida->getBaraja()->repartirCarta());
-                $partida->getCrupier()->nuevaCarta($partida->getBaraja()->repartirCarta());
+            if($partida->$crupier->valorMano() <17){
+                $mazo = $baraja ->getMazo();
+                $cartasC= new Carta($mazo->getPalo(), $mazo->getFigura());
+                $partida->$crupier->nuevaCarta($cartasC);
             }
 
             VistaPartida::render();
