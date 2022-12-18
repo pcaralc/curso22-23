@@ -3,7 +3,7 @@ session_start();
 ?>
 <?php
     function autocarga($clase){ 
-        $ruta = "./controladorres/$clase.php"; 
+        $ruta = "./controladores/$clase.php"; 
         if (file_exists($ruta)){ 
           include_once $ruta; 
         }
@@ -33,7 +33,7 @@ session_start();
     if($_REQUEST){
         if(isset($_REQUEST['acion'])){
             if($_REQUEST['accion']== "inicio"){
-                ControladorPartida::nuevaPartida();
+                ControladorPartida::nuevaPartida(); 
             }
         }
     }

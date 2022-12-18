@@ -1,7 +1,7 @@
 <?php
 class BarajaInglesa extends baraja{
-    static $palos = array("corazones", "diamantes", "picas", "tréboles");
-    static $figuras = array(1,2,3,4,5,6,7,8,9,10,11,12);
+    static $palos = array("c", "d", "p", "t");
+    static $figuras = array(1,2,3,4,5,6,7,8,9,10,11,12,13);
 
     function __construct(){
         parent::__construct();
