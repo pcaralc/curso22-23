@@ -9,7 +9,7 @@
             echo '            
             <div class="row align-items-md-stretch">
 
-            <div class="container">
+          <div class="container">
             <div class="input-group">
               <div class="input-group" style="width:30%">
               <form action="" method="get">
@@ -28,9 +28,9 @@
                 <input type="text" name="dni" class=" rounded border-dark" placeholder="Buscar DNI"/>
                 <input type="submit" value="Buscar" name="buscarDNI" class="btn btn-outline-white bg-dark text-white">
               </form>
-              </div>
             </div>
-            <nav  class="d-flex flex-row-reverse">
+          </div>
+          <nav  class="d-flex flex-row-reverse">
             <button type="button" class="btn btn-outline-white bg-dark text-white mb-3" data-bs-toggle="modal" data-bs-target="#nuevoPrestamo" style="float:right">Insertar prestamo</button>
           </nav>
         
